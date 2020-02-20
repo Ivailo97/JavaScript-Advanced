@@ -1,0 +1,53 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/2c/67/fb/2c67fb43d38ebe75ef01fd0a3367ba46.jpg');
+    background-size: 400px;
+    background-repeat: repeat;
+}
+
+#slide-image {
+    width: 350px;
+    height: 350px;
+}
+
+li {
+    overflow-wrap: break-word;
+}
+
+.comment {
+    list-style-type: none;
+    min-width: 300px;
+    min-height: 30px;
+}
+
+.comment a {
+    text-decoration: none;
+    color: black;
+}
+
+.comments-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 200px;
+    background-color: azure;
+}
+
+.comment small {
+    display: block;
+}
+
+.comment a {
+    margin-left: 15px;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper {
+    margin-left: 70px !important;
+}
+
+#sidebar-wrapper .list-group a {
+    color: blanchedalmond;
+}
