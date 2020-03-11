@@ -30,13 +30,20 @@ function attachEvents() {
                 body: JSON.stringify(obj)
             })
             .then(res => res.json())
-            .then(console.log)
+            .then(x => {
+
+                console.log(1);
+                load()
+            })
 
         person.value = '';
         phone.value = '';
     }
 
     function load() {
+
+        ul.innerHTML = "";
+        console.log(2);
 
         fetch(`${GETandPOSTurl}`)
             .then(res => res.json())
@@ -46,12 +53,12 @@ function attachEvents() {
                     .filter(([key, value]) => value.name !== '' && value.phone !== '')
                     .map(([key, value]) => {
                         const li = createAndFormatLi(value);
-                        console.log(li.textContent);
-                        console.log(key);
                         valuesAndKeys[li.textContent] = key;
                         return li;
                     })
                     .forEach(x => ul.appendChild(x))
+
+                console.log(3);
             })
     }
 
