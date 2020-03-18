@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,7 +25,46 @@
         </thead>
         <tbody></tbody>
     </table>
-    <script src="./app.js"></script>
+
+    <div class="row">
+
+        <div class="col"></div>
+
+        <div class="col mt-3">
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input type="text" class="form-control" id="FirstName" placeholder="First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="FacultyNumber">Faculty number</label>
+                    <input type="number" class="form-control" id="FacultyNumber" placeholder="Faculty number">
+                </div>
+
+                <div class="form-group">
+                    <label for="Grade">Grade</label>
+                    <input type="number" class="form-control" id="Grade" placeholder="Grade">
+                </div>
+
+                <button type="submit" id="createStudent">Create</button>
+
+            </form>
+
+        </div>
+
+        <div class="col"></div>
+
+    </div>
+
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>
