@@ -1,0 +1,13 @@
+{{>header}}
+
+<div id="dashboard-holder">
+    {{#if hasIdeas}}
+    {{#each ideas}}
+    {{> idea}}
+    {{/each}}
+    {{else}}
+    <h1>No ideas yet! Be the first one :)</h1>
+    {{/if}}
+</div>
+
+{{>footer}}
