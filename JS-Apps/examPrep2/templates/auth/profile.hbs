@@ -2,11 +2,21 @@
     <div class="profile home-text col-md-6 text-center col-lg">
         <img class="profile-img" src="./images/user.png" />
         <div class="profile-info">
-            <p>Username: <small>John</small></p>
-            <p class="infoType">Has 2 ideas =)</p>
-            <p>Dinner Recipe</p>
-            <p>4 easy DIY ideas to try!</p>
+
+            <p>Username: <small>{{username}}</small></p>
+            <p class="infoType">Has {{ideasCount}} ideas =)</p>
+
+            {{#if ideas}}
+
+            {{#each ideas}}
+            {{>idea}}
+            {{/each}}
+
+            {{else}}
             <p>No ideas yet</p>
+            {{/if}}
+           
+
         </div>
     </div>
 </div>

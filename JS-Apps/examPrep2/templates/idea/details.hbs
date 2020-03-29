@@ -25,7 +25,7 @@
         <a class="btn detb" href="#/idea/delete/{{ideaId}}">Delete</a>
     </div>
     {{else}}
-    <form class="text-center" method="POST" action="#/idea/add-comment/{{ideaId}}">
+    <form class="text-center" method="GET" action="#/idea/add-comment/{{ideaId}}">
         <textarea class="textarea-det" name="newComment" id=""></textarea>
         <button type="submit" class="btn detb">Comment</button>
         <a class="btn detb" href="#/idea/like/{{ideaId}}">Like</a>

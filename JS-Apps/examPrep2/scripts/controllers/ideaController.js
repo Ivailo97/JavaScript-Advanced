@@ -56,29 +56,20 @@ export async function detailsIdeaViewHandler() {
     this.partials.comment = await this.load('./templates/idea/comment.hbs');
 
     await this.partial('./templates/idea/details.hbs');
-
-    addCommentHandler(this, ideaId);
 }
 
-function addCommentHandler(context, ideaId) {
+export async function commentIdeaHandler() {
 
-    let formRef = document.querySelector('form');
+    const ideaToComment = await requester.ideas.getById(this.params.id);
 
-    formRef.addEventListener('submit', async function(e) {
+    const newComment = {
+        author: sessionStorage.getItem('username'),
+        text: this.params.newComment
+    };
 
-        e.preventDefault();
+    await requester.ideas.patchEntity({ comments: [...ideaToComment.comments, newComment] }, this.params.id);
 
-        const ideaToComment = await requester.ideas.getById(ideaId);
-
-        const newComment = {
-            author: sessionStorage.getItem('username'),
-            text: document.getElementsByClassName('textarea-det')[0].value
-        };
-
-        await requester.ideas.patchEntity({ comments: [...ideaToComment.comments, newComment] }, ideaId);
-
-        context.redirect(`#/idea/details/${ideaId}`)
-    });
+    this.redirect(`#/idea/details/${this.params.id}`);
 }
 
 export async function likeIdeaHandler() {

@@ -9,6 +9,7 @@ import {
     createIdeaViewHandler,
     likeIdeaHandler,
     deleteIdeaHandler,
+    commentIdeaHandler,
     profileViewHandler,
     detailsIdeaViewHandler,
 } from './controllers/index.js'
@@ -37,12 +38,12 @@ const app = Sammy('#main', function() {
     this.post('#/idea/create', () => false);
 
     this.get('#/idea/details/:id', detailsIdeaViewHandler);
-    this.post('#/idea/add-comment/:id', () => false);
+    this.get('#/idea/add-comment/:id', commentIdeaHandler);
 
     this.get('#/idea/like/:id', likeIdeaHandler);
     this.get('#/idea/delete/:id', deleteIdeaHandler);
 
-    // this.get('#/profile', profileViewHandler);
+    this.get('#/profile', profileViewHandler);
 });
 
 $(() => {
