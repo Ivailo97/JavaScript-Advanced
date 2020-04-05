@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="root">
+
+</body>
+
+<!-- Modules -->
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/handlebars/dist/handlebars.js"></script>
+<script src="/node_modules/sammy/lib/sammy.js"></script>
+<script src="/node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCWa0v0qBWBqeTjLmaBfavHLy5NFMedo4g",
+        authDomain: "test-db-2d407.firebaseapp.com",
+        databaseURL: "https://test-db-2d407.firebaseio.com",
+        projectId: "test-db-2d407",
+        storageBucket: "test-db-2d407.appspot.com",
+        messagingSenderId: "173043436443",
+        appId: "1:173043436443:web:8ad782a9efac10a8dc6f3e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<!-- <script src="scripts/firebase.js"></script> -->
+
+<script src="/scripts/app.js" type="module"></script>
+
+</html>
