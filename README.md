@@ -1,2 +1,2 @@
 # JavaScript-Advanced
-All tasks from softuni javascript-advanced course
+All tasks from softuni javascript advanced course
